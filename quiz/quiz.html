@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="quiz.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="start" class="col-md-6">
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+            <div class="col-md-6">
+                <div id="timer">Your time started!!!!</div>
+            </div>
+        </div>
+        <div id="question">Questions :</div>
+        <div id="answer">
+            <div id="first" onclick="checkAnswer('A')"></div>
+            <div id="second" onclick="checkAnswer('B')"></div>
+            <div id="third" onclick="checkAnswer('C')"></div>
+        </div>
+        <div>
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+        <div>
+            <button id="btn" class="btn btn-success">Submit</button>
+        </div>
+        <div id="score"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

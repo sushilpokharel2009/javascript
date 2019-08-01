@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="validation.css" />
+  <link rel="stylesheet" href="validation.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- <form action="" name="myForm" method="POST">
+        <div class="myDiv">
+          <input
+            type="text"
+            id="_userName"
+            pattern="[a-z]{4,8}"
+            title="Should be minimum 4"
+            class="form-control"
+            placeholder="User Name"
+            name="name"
+            onblur="requiredField(this)"
+            required
+          />
+        </div>
+        <div class="myDiv">
+          <input
+            type="password"
+            id="_password"
+            pattern="[a-z]{4,8}"
+            title="Should be minimum 4"
+            class="form-control"
+            placeholder="Password"
+            name="pwd"
+            pattern="="
+            onblur="requiredField(this)"
+            required
+          />
+        </div>
+        <div class="myDiv">
+          <input
+            type="password"
+            id="_cpassword"
+            pattern="[a-z]{4,8}"
+            title="Should be minimum 4"
+            class="form-control"
+            placeholder="Confirm Password"
+            name="cpwd"
+            onblur="requiredField(this)"
+            required
+          />
+        </div>
+        <div class="myDiv">
+          <button type="submit">Submit</button>
+        </div>
+      </form> -->
+    <!-- //********************************// -->
+    <form id="myform" action="server/sample.php" method="POST">
+      <fieldset>
+        <legend><strong>Add your comment</strong></legend>
+
+        <p>
+          <label for="author">Name <abbr title="Required">*</abbr></label>
+          <input required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" id="author"
+            title="Your name (no special characters, diacritics are okay)" type="text" onblur="requiredField(this)" />
+        </p>
+        <span id="nameError" style="color: red">Invalid Name</span>
+
+        <p>
+          <label for="email">Email <abbr title="Required">*</abbr></label>
+          <input required="required" aria-required="true"
+            pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$"
+            title="Your email address" type="email" onblur="requiredField(this)" />
+        </p>
+
+        <p>
+          <label for="website">Website</label>
+          <input
+            pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$"
+            title="Your website address" type="url" required="required" aria-required="true"
+            onblur="requiredField(this)" />
+        </p>
+
+        <p>
+          <label for="password">Password <abbr title="Required">*</abbr></label>
+          <input type="password" id="_password" pattern="[a-z]{4,8}" title="Should be minimum 4" name="pwd" pattern="="
+            onblur="requiredField(this)" required />
+        </p>
+
+        <p>
+          <label for="password">Confirm Password <abbr title="Required">*</abbr></label>
+          <input type="password" id="_cpassword" pattern="[a-z]{4,8}" title="Should be minimum 4" name="cpwd"
+            onblur="checkPassword(this)" required />
+        </p>
+        <p>
+          <label for="text">Comment <abbr title="Required">*</abbr></label>
+          <textarea required="required" aria-required="true" title="Your comment" cols="40" rows="10"
+            onblur="requiredField(this)"></textarea>
+        </p>
+      </fieldset>
+      <fieldset>
+        <button name="save" type="submit">Submit Comment</button>
+      </fieldset>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="validation.js"></script>
+</body>
+
+</html>
